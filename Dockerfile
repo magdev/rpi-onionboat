@@ -15,7 +15,7 @@ RUN apt-get -qq update && \
                                                wget \
                                                supervisor \
                                                tor && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
+    apt-get clean && rm -rf /var/lib/apt/lists/* || true
 
 # Setup supervisord
 ADD files/supervisor/supervisord.conf /etc/supervisor/supervisord.conf
