@@ -7,6 +7,6 @@ For more information please look at:
 
 # what was modified?
 Just a few changes in Dockerfile were made to provide Raspberry Pi support.
-* It now bases on *sdhibit/rpi-raspbian:latest* instead of *chambana/base:latest*
+* Its now based on *sdhibit/rpi-raspbian:latest* instead of *chambana/base:latest*
 * The appropriate docker-gen for armhf 
-* Removed adding tor repo because of incompability. See this [post](http://tor.stackexchange.com/questions/242/how-to-run-tor-on-raspbian-on-the-raspberry-pi) for detail.
+* Removed adding the tor repo because of incompability. See this [post](http://tor.stackexchange.com/questions/242/how-to-run-tor-on-raspbian-on-the-raspberry-pi) for detail.
