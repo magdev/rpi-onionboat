@@ -5,9 +5,9 @@ For more information please look at:
 - https://nonconformity.net/2016/06/10/onionboat-using-docker-for-easy-tor-hidden-services/
 - https://github.com/jheretic/onionboat
 
-# what was modified?
-Just a few changes in Dockerfile were made to provide Raspberry Pi support.
-* Its now based on *schachr/raspbian-stretch:latest* instead of *sdhibit/rpi-raspbian:latest*
+# What was modified?
+
+* Its now based on *schachr/raspbian-stretch:latest*
 * The appropriate docker-gen for armhf, updated to version 0.7.4
 * Optimized Dockerfile to use less layers
 * Allow multiple ports on the same container using env variable HIDDENSERVICE_PORTS with a comma-separated list of ports
