@@ -11,3 +11,4 @@ For more information please look at:
 * The appropriate docker-gen for armhf, updated to version 0.7.4
 * Optimized Dockerfile to use less layers
 * Allow multiple ports on the same container using env variable HIDDENSERVICE_PORTS with a comma-separated list of ports
+* List known onionboats on docker-gen notification
