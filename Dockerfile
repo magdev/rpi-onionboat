@@ -15,14 +15,14 @@ RUN apt-get -qq update && \
     && rm -rf /var/lib/apt/lists/* || true
 
 WORKDIR /app
-COPY ./bin/run.sh /app/bin/run.sh
+COPY ./bin/ /app/bin/
 COPY ./files/docker-gen/torrc.tmpl /app/torrc.tmpl
 COPY ./files/supervisor/supervisord.conf /etc/supervisor/supervisord.conf
 
 RUN wget https://github.com/jwilder/docker-gen/releases/download/$DOCKER_GEN_VERSION/docker-gen-linux-$DOCKER_GEN_ARCH-$DOCKER_GEN_VERSION.tar.gz \
     && tar -C /usr/local/bin -xvzf docker-gen-linux-$DOCKER_GEN_ARCH-$DOCKER_GEN_VERSION.tar.gz \
     && rm docker-gen-linux-$DOCKER_GEN_ARCH-$DOCKER_GEN_VERSION.tar.gz \
-    && chmod +x /app/bin/run.sh
+    && chmod +x /app/bin/*.sh
 
 VOLUME ["/var/lib/tor/hidden_services"]
 EXPOSE 9001

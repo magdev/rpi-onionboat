@@ -1,4 +1,4 @@
-#!/bin/bash - 
+#!/bin/bash -
 set -e
 
 # Warn if the DOCKER_HOST socket does not exist
@@ -20,7 +20,8 @@ if [ "$socketMissing" = 1 -a "$1" = '/usr/bin/supervisord' -a "$2" = '-c' -a "$3
 fi
 
 # Set permissions
-mkdir -p /var/lib/tor/hidden_services && \
+hs_dir="/var/lib/tor/hidden_services"
+mkdir -p $hs_dir && \
     chown -R debian-tor:debian-tor /var/lib/tor && \
     chmod -R u=rw,u+X,go= /var/lib/tor
 
